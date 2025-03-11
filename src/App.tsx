@@ -47,7 +47,7 @@ function App() {
         <div className="w-full md:w-md mx-auto px-6 md:px-0">
           <div className="flex flex-row gap-4 items-center justify-between w-full mb-6 ">
             <div className="flex flex-row gap-3 items-center">
-              <img src="/src/assets/github.png" alt="github_logo" width={30} />
+              <img src="/favicon.png" alt="github_logo" width={30} />
               <p>GitHub Repositories Explorer</p>
             </div>
 
