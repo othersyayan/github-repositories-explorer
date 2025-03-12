@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 import { SkeletonCard } from './skeleton-card';
 import RepoCardDescription from './repo-card-desc';
+import { DialogRepositories } from './dialog-repositories';
 
 // ----------------------------------------------------------------------
 
@@ -26,13 +27,17 @@ export function RepoCardList({ username, loading, users }: Props) {
       {!users ? null : users.items.length ? (
         users.items.map((user, index) => (
           <div className="border p-4 rounded-lg mb-4" key={index}>
-            <div className="flex flex-row items-center gap-3">
-              <Avatar className="w-10 h-10">
-                <AvatarImage src={user.avatar_url} alt={`${user.login}-${user.id}`} />
-                <AvatarFallback>{user.login}</AvatarFallback>
-              </Avatar>
+            <div className="flex flex-row items-center justify-between gap-3">
+              <div className="flex flex-row items-start gap-3">
+                <Avatar className="w-10 h-10">
+                  <AvatarImage src={user.avatar_url} alt={`${user.login}-${user.id}`} />
+                  <AvatarFallback>{user.login}</AvatarFallback>
+                </Avatar>
 
-              <RepoCardDescription urlDetail={user.url} urlHtml={user.html_url} />
+                <RepoCardDescription urlDetail={user.url} urlHtml={user.html_url} />
+              </div>
+
+              <DialogRepositories data={user} />
             </div>
           </div>
         ))

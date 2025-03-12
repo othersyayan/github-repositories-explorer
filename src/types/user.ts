@@ -4,6 +4,7 @@ export interface UserItem {
   login: string;
   score: number;
   html_url: string;
+  repos_url: string;
   avatar_url: string;
 }
 

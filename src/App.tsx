@@ -31,7 +31,7 @@ function App() {
   const [username, setUsername] = useState<string>('');
 
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [perPage] = useState<number>(5);
+  const [perPage] = useState<number>(3);
 
   const isSubmitting = useBoolean();
 
@@ -106,7 +106,7 @@ function App() {
             loading={isSubmitting.value}
             handleOnSubmit={(res) => {
               setUsername(res);
-              searchRepoByUsername(res, currentPage);
+              searchRepoByUsername(res, 1);
             }}
           />
 

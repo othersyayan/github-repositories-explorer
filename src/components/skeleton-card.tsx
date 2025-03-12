@@ -9,8 +9,6 @@ export function SkeletonCard() {
         <Skeleton className="h-[77px] w-full" />
         <Skeleton className="h-[77px] w-full" />
         <Skeleton className="h-[77px] w-full" />
-        <Skeleton className="h-[77px] w-full" />
-        <Skeleton className="h-[77px] w-full" />
       </div>
     </div>
   );
